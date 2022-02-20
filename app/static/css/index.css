@@ -1,0 +1,30 @@
+:root{
+    --green:#9dae7d;
+    --light:#fef3f0;
+    --pink:#f6bbbe;
+    --brown:#c56742;
+    --mauve:#49373b;
+}
+
+html{
+    height: 50vh;
+}
+
+body{
+    min-height: 100vh;
+    background-color: black;
+    background-image: url('../images/demon_slayer_img/sun2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* display: flex;
+    justify-content: flex-start; */
+}
+
+.container{
+    background-color: transparent;
+    color: rgb(226, 68, 6);
+    font-weight: bold;
+    align-self: flex-start;
+    margin-left: 5px;
+    /* display: inline-block; */
+}

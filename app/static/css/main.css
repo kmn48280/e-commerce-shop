@@ -1,0 +1,73 @@
+:root{
+    --green:#9dae7d;
+    --light:#fef3f0;
+    --pink:#f6bbbe;
+    --brown:#c56742;
+    --mauve:#49373b;
+}
+
+html{
+    height: 50vh;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--mauve);
+    /* display: flex;
+    flex-direction: column;
+    align-content: center; */
+}
+
+nav{
+    height: 5vh;
+}
+
+nav.navbar{
+    background-color: var(--brown);
+}
+
+nav img{
+    background-color: var(--brown);
+    margin: 2px 2px 2px 2px;
+    height: 75px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.navbar-toggler{
+    background-color: var(--green);
+    margin-right: 10px;
+}
+
+.container-fluid{
+    background-color: var(--pink);
+    background-image: url('../images/demon_slayer_img/nezuko2.png');
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    text-align: left;
+}
+
+.offcanvas-header{
+    background-image: url('../images/demon_slayer_img/nezuko2.png');
+}
+.offcanvas-body{
+    background-color: var(--brown);
+}
+
+.container{
+    background-color: var(--green);
+    color: var(--mauve);
+    display: block;
+    margin-top: 100px;
+}
+
+.container h1{
+    text-align: left;
+}
+
+div.login-form{
+    display: inline;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}

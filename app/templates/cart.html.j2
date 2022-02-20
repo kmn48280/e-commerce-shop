@@ -1,0 +1,33 @@
+{% extends 'base.html.j2' %}
+
+{% block title %}
+Shopping Cart
+{% endblock %}
+
+{% block ss%}
+<link rel="stylesheet" href="{{url_for('static', filename='/css/cart.css')}}">
+{% endblock %}
+
+
+{% block content %}
+
+{% for item in shopping_cart %}
+
+<div class="card" style="width: 20rem;">
+  <div class="card-body">
+  <img src={{item.img}} class="card-img-top" alt="item image">
+    <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{item.desc}}</p>
+      <p class="card-text">${{item.price}}0</p>
+    <p><a href="{{url_for('shop.remove_item', id = item.id)}}" class="card-link text-danger"><strong>Remove from Cart</strong></a></p>
+    <p><a href="{{url_for('shop.show_all_items')}}" class="card-link"><strong>Continue Shopping!</strong></a></p>
+  </div>
+</div>
+
+{% endfor %}
+
+
+
+
+{% endblock %}
+

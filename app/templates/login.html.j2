@@ -1,0 +1,49 @@
+{% extends 'base.html.j2' %}
+
+{% block title %}
+Login
+{% endblock %}
+
+
+{% block content %}
+<br>
+<h1>Login</h1>
+
+<div class="login-form">
+<form action="{{url_for('auth.login')}}", class="login-form", method='POST'>
+{{ form.hidden_tag() }}
+
+<div clas="row mb-3">
+    {{ form.email.label(class="form-label")}}
+    <div class="col-sm-8">
+    {{ form.email(class="form-control")}}
+        {% for error in form.email.errors %}
+            <small style="color:red;">{{ error }}</small>
+        {% endfor %}
+    </div>
+</div>
+<br>
+
+<div class="row mb-3">
+    {{ form.password.label(class="form-label")}}
+    <div class="col-sm-8">
+    {{ form.password(class="form-control")}}
+        {% for error in form.password.errors %}
+        <   small style="color:red;">{{ error }}</small>
+        {% endfor %}
+    </div>
+</div>
+<br>
+{{ form.submit(class="btn btn-dark form-label")}}
+    <small style="color:red;">{{ error }}</small>
+</form>
+<a class="btn btn-dark" href="{{url_for('auth.register')}}" role="button">Click here to Register!</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
+
+

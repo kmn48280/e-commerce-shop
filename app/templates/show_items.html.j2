@@ -1,0 +1,58 @@
+{% extends 'base.html.j2' %}
+
+{% block title %}
+Show Items
+{% endblock %}
+
+{% block ss %}
+<link rel="stylesheet" href="{{url_for('static', filename='/css/show_items.css')}}">
+{% endblock %}
+
+{% block main %}
+<div class="row">
+  <div class="column">
+    <img src="{{url_for('static', filename='/images/demon_slayer_img/basket.png')}}" alt="nezuko">
+  </div>
+  <div class="column">
+    <img src="{{url_for('static', filename='/images/demon_slayer_img/tanjiro.png')}}" alt="tanjiro">
+  </div>
+  <div class="column">
+    <img src="{{url_for('static', filename='/images/demon_slayer_img/giyu.jpg')}}" alt="giyu">
+  </div>
+    <div class="column">
+    <img src="{{url_for('static', filename='/images/demon_slayer_img/rengoku2.jpg')}}" alt="rengoku">
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% block content %}
+    
+    {% for item in items_in_category %}
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+  <img src={{item.img}} class="card-img-top" alt="item image">
+    <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{item.desc}}</p>
+      <p class="card-text">${{item.price}}0</p>
+    <a href="{{url_for('shop.select_item', id = item.id)}}" class="card-link"><strong>Add to Cart</strong></a>
+  </div>
+</div>
+    {% endfor %}
+
+    {% for item in all_items %}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+  <img src={{item.img}} class="card-img-top" alt="item image">
+    <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{item.desc}}</p>
+      <p class="card-text">${{item.price}}0</p>
+    <a href="{{url_for('shop.select_item', id = item.id)}}" class="card-link"><strong>Add to Cart</strong></a>
+  </div>
+</div>
+    {% endfor %}
+
+{% endblock %}
+

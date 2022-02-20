@@ -1,0 +1,65 @@
+{% extends 'base.html.j2' %}
+
+{% block title %}
+About Us
+{% endblock %}
+
+{% block ss %}
+<link rel="stylesheet" href="{{url_for('static', filename='/css/about.css')}}">
+{% endblock %}
+
+
+{% block content %}
+    <main>
+        <div id="articles">
+            <article>
+                <h2>About Us</h2>
+                <img src="http://placehold.it/800x200">
+                <div>
+                    Some text...
+                </div>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias fugiat dolorum qui aliquid repudiandae? Quos laboriosam et possimus veniam ipsa quae nesciunt distinctio aut non cumque? Voluptatem labore a deserunt.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ratione quaerat atque, sit optio ab eaque commodi ipsum veniam exercitationem culpa aperiam necessitatibus sunt, voluptas, facere hic explicabo accusamus eligendi.
+                </p>
+            </article>
+            <article>
+                <h2>Title Heading</h2>
+                <div class="title_desc">
+                    <string><small>Title description, Sep 2, 2017</small></string>
+                </div>
+                <img src="http://placehold.it/800x200">
+                <div>
+                    Some text...
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt suscipit natus laborum, ea consequuntur nostrum. Animi iste non reprehenderit, sunt quisquam magni aut facere, repellendus iure, nesciunt inventore beatae neque.
+                    Eaque, dolor vitae, minima voluptatum reprehenderit aperiam aspernatur exercitationem, earum nesciunt molestiae possimus porro quae dolorem sit enim! Reprehenderit, delectus corrupti. Sequi assumenda, nulla perferendis vitae perspiciatis non! Fugit, sequi!
+                </p>
+            </article>
+        </div>
+        <div id="sidebar">
+            <article>
+                <h2>Me</h2>
+                <img src="{{url_for('static', filename='/images/demon_slayer_img/nezukodoll.png')}}" alt="placeholder" width="300" height="200">
+                <div>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, recusandae numquam ducimus, ab quae blanditiis fugiat perferendis quia debitis aspernatur iusto ut nam eveniet aut dolore quas illo culpa praesentium.
+                </div>
+            </article>
+            <article>
+                <h2>Interesting List</h2>
+                <ul id="interestinglist">
+                    <li><img src="http://placehold.it/300x100" alt=""></li>
+                    <li><img src="http://placehold.it/300x100" alt=""></li>
+                    <li><img src="http://placehold.it/300x100" alt=""></li>
+                </ul>
+            </article>
+            <article>
+                <h2>Contact Info</h2>
+                <div>
+                    N/A
+                </div>
+            </article>
+        </div>
+    </main>
+{% endblock %}

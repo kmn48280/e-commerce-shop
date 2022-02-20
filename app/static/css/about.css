@@ -1,0 +1,41 @@
+:root{
+    --green:#9dae7d;
+    --light:#fef3f0;
+    --pink:#f6bbbe;
+    --brown:#c56742;
+    --mauve:#49373b;
+}
+
+body{
+    margin:0px;
+    padding:0px;
+    background-color:var(--brown);
+    display: grid;
+    height: 100vh;
+}
+
+main{
+     display: flex;
+     color: var(--pink);
+ }
+
+#interestinglist{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+h2{
+    padding: 0px;
+    margin:20px 0px 0px 0px;
+}
+
+.title_desc{
+    padding: 20px 0px;
+}
+
+article{
+    padding: 10px 10px;
+    margin: 10px;
+    background-color: var(--mauve);
+}
