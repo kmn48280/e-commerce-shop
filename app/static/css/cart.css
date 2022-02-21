@@ -60,3 +60,10 @@ body{
     margin: 5px;
     padding: 15px;
 }
+
+.cart-buttons{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    order: 4;
+}

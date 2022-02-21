@@ -26,8 +26,11 @@ Shopping Cart
 
 {% endfor %}
 
-
-
+<div class="cart-buttons">
+  <a href="{{url_for('shop.clear_cart')}}" class="btn btn-info">Clear Cart</a>
+  <br>
+  <a href="{{url_for('shop.checkout')}}" class="btn btn-info">Checkout</a>
+</div>
 
 {% endblock %}
 

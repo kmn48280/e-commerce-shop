@@ -79,6 +79,7 @@ class User(UserMixin, db.Model):
             for item in self.user_cart:
                 self.user_cart.remove(item)
         db.session.commit()
+        return flash('You have cleared your cart', 'warning')
 
     def total(self):
         total = 0

@@ -35,7 +35,6 @@ Show Items
   <div class="card-body">
   <img src={{item.img}} class="card-img-top" alt="item image">
     <h5 class="card-title">{{item.name}}</h5>
-      <p class="card-text">{{item.desc}}</p>
       <p class="card-text">${{item.price}}0</p>
     <a href="{{url_for('shop.select_item', id = item.id)}}" class="card-link"><strong>Add to Cart</strong></a>
   </div>
@@ -47,7 +46,6 @@ Show Items
   <div class="card-body">
   <img src={{item.img}} class="card-img-top" alt="item image">
     <h5 class="card-title">{{item.name}}</h5>
-      <p class="card-text">{{item.desc}}</p>
       <p class="card-text">${{item.price}}0</p>
     <a href="{{url_for('shop.select_item', id = item.id)}}" class="card-link"><strong>Add to Cart</strong></a>
   </div>

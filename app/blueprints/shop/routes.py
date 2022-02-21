@@ -27,15 +27,13 @@ def select_item(id):
         flash('You have successfully added this item to your cart!', 'success')
         return redirect(url_for('shop.view_cart'))
  
-        # print('meow')
-        # return redirect(url_for('shop.show_all_items'))
 
 @shop.route('/view_cart')
 @login_required
 def view_cart():
     shopping_cart = current_user.user_cart
     if len(list(shopping_cart)) == 0:
-        flash('Your cart is empty! Add some items on our search page!')
+        flash('Your cart is empty! Add some items on our search page!', 'warning')
         return redirect(url_for('main.index'))
     else:
         return render_template('cart.html.j2', shopping_cart = shopping_cart)
@@ -47,13 +45,20 @@ def remove_item(id):
     flash('You have removed this item', 'warning')
     return redirect(url_for('shop.view_cart'))
 
+@shop.route('/clear_cart')
+@login_required
+def clear_cart():
+    current_user.clear_cart()
+    flash('Your cart is empty!', 'warning')
+    return redirect(url_for('shop.show_all_items'))
+
 @shop.route('/checkout')
 @login_required
 def checkout():
-    if len(list(current_user.user_cart)) == 0:
-        flash('Your cart is empty! Add some items on our search page!')
-        return redirect(url_for('main.index'))
     shopping_cart = current_user.user_cart
+    # if len(list(current_user.user_cart)) == 0:
+    #     flash('Your cart is empty! Add some items on our search page!')
+    #     return redirect(url_for('main.index'))
     return render_template('checkout.html.j2', shopping_cart = shopping_cart)
 
 @shop.route('/pay')
